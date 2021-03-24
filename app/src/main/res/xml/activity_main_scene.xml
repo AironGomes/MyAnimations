@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000"
+        app:motionInterpolator="linear">
+
+        <OnSwipe
+            app:dragDirection="dragUp"
+            app:touchAnchorId="@id/image_photo"
+            app:touchAnchorSide="bottom"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@id/title"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="85"
+                app:motionTarget="@id/imageShow"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="95"
+                app:motionTarget="@id/lb_photos"
+                android:scaleY="0.3"
+                android:scaleX="0.3"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/lb_name"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/text_name"
+                android:alpha="0.0"/>
+
+            <KeyAttribute
+                app:framePosition="10"
+                app:motionTarget="@id/ic_arrow_down"
+                android:alpha="0.0"/>
+        </KeyFrameSet>
+    </Transition >
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="500"
+        app:motionInterpolator="linear">
+        <OnClick
+            app:targetId="@id/ic_arrow_down"
+            app:clickAction="transitionToEnd"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@id/title"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="85"
+                app:motionTarget="@id/imageShow"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="95"
+                app:motionTarget="@id/lb_photos"
+                android:scaleY="0.3"
+                android:scaleX="0.3"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/lb_name"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/text_name"
+                android:alpha="0.0"/>
+
+            <KeyAttribute
+                app:framePosition="10"
+                app:motionTarget="@id/ic_arrow_down"
+                android:alpha="0.0"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <Transition
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="500"
+        app:motionInterpolator="linear">
+        <OnClick
+            app:targetId="@id/image_background"
+            app:clickAction="transitionToStart"/>
+
+        <KeyFrameSet>
+            <KeyAttribute
+                app:framePosition="80"
+                app:motionTarget="@id/title"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="85"
+                app:motionTarget="@id/imageShow"
+                android:scaleY="0.5"
+                android:scaleX="0.5"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="95"
+                app:motionTarget="@id/lb_photos"
+                android:scaleY="0.3"
+                android:scaleX="0.3"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/lb_name"
+                android:alpha="0.0"/>
+            <KeyAttribute
+                app:framePosition="30"
+                app:motionTarget="@id/text_name"
+                android:alpha="0.0"/>
+
+            <KeyAttribute
+                app:framePosition="10"
+                app:motionTarget="@id/ic_arrow_down"
+                android:alpha="0.0"/>
+        </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/image_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/image_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_background"
+            app:layout_constraintTop_toBottomOf="@+id/image_background"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_photo"
+            app:layout_constraintTop_toTopOf="@id/image_photo"
+            app:layout_constraintStart_toEndOf="@id/image_photo"
+            android:alpha="0.0" />
+        <Constraint
+            android:id="@+id/text_bio"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/ic_arrow_down"
+            app:layout_constraintTop_toBottomOf="@id/lb_bio" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="18"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lb_email"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="20"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/lb_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/text_email"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/lb_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="14"/>
+        </Constraint>
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+
+        <Constraint
+            android:id="@+id/image_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:translationY="50dp"
+            app:layout_constraintBottom_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/image_photo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Constraint
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:alpha="1.0"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/image_photo"
+            app:layout_constraintTop_toTopOf="@id/image_photo"
+            app:layout_constraintStart_toEndOf="@id/image_photo"/>
+
+        <Constraint
+            android:id="@+id/lb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toBottomOf="@id/image_photo"
+            app:layout_constraintStart_toStartOf="@id/parent"
+            android:alpha="0.0"/>
+        <Constraint
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lb_name"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:alpha="0.0"/>
+        <Constraint
+            android:id="@+id/lb_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/image_photo"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="18"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/text_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/lb_email"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="20"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/lb_bio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/text_email"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp" >
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="16" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/text_bio"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lb_bio"
+            app:layout_constraintBottom_toTopOf="@id/lb_photos">
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="20"/>
+        </Constraint>
+        <Constraint
+            android:id="@+id/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />]
+        <Constraint
+            android:id="@+id/lb_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toTopOf="@id/imageShow"
+            android:alpha="1">
+            <CustomAttribute
+                app:attributeName="textSize"
+                app:customFloatValue="16" />
+        </Constraint>
+        <Constraint
+            android:id="@+id/imageShow"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible"
+            android:alpha="1"
+            app:layout_constraintBottom_toTopOf="@id/ic_arrow_down"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+</MotionScene>

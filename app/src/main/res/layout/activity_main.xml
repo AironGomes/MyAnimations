@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    android:id="@+id/container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.motion.widget.MotionLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutDescription="@xml/activity_main_scene">
+
+        <ImageView
+            android:id="@+id/image_background"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:background="@drawable/image1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_photo"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:src="@drawable/image_photo"
+            android:layout_gravity="center"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceImage"
+            app:layout_constraintBottom_toBottomOf="@+id/image_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_background" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:alpha="0.0"
+            android:text="Airon Gomes"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Name"
+            android:textColor="@color/label"
+            android:textSize="14sp"
+            app:layout_constraintTop_toBottomOf="@id/image_photo"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="Airon Gomes"
+            android:textColor="@color/text"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lb_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lb_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="E-mail"
+            android:textColor="@color/label"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            app:layout_constraintTop_toBottomOf="@id/text_name"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="sans-serif-light"
+            android:text="airon.gms@gmail.com"
+            android:textAlignment="textStart"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lb_email" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lb_bio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Biography"
+            android:textColor="@color/label"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            app:layout_constraintTop_toBottomOf="@id/text_email"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_bio"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:ellipsize="end"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/bio"
+            android:textAlignment="textStart"
+            android:textColor="@color/text"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/lb_bio" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/lb_photos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            android:text="Photos"
+            android:textColor="@color/label"
+            android:textSize="14sp"
+            android:textAlignment="textStart"
+            android:visibility="gone"
+            android:alpha="0.0"
+            app:layout_constraintBottom_toTopOf="@id/imageShow"
+            app:layout_constraintStart_toStartOf="parent"/>
+        <HorizontalScrollView
+            android:id="@+id/imageShow"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:visibility="gone"
+            android:alpha="0.0"
+            android:clipToPadding="false"
+            android:paddingEnd="8dp"
+            android:paddingTop="8dp"
+            android:background="#DAD8D8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/ic_arrow_down">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/image1"
+                    android:layout_width="220dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/image1"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    />
+                <ImageView
+                    android:id="@+id/image2"
+                    android:layout_width="220dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/image2"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    />
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="220dp"
+                    android:layout_height="180dp"
+                    android:src="@drawable/image3"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="8dp"
+                    />
+            </LinearLayout>
+        </HorizontalScrollView>
+        <ImageView
+            android:id="@+id/ic_arrow_down"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_arrow_down"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <ImageView
+            android:id="@+id/background_expanded"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#CC000000"
+            android:visibility="invisible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+    </androidx.constraintlayout.motion.widget.MotionLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
