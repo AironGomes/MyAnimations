@@ -39,7 +39,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:src="@drawable/image_photo"
-                android:layout_margin="1dp"
+                android:layout_margin="1.5dp"
                 android:layout_gravity="center"
                 app:shapeAppearanceOverlay="@style/ShapeAppearanceImage"
                 />
