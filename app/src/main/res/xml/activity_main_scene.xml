@@ -240,7 +240,6 @@
             android:alpha="1.0"
             android:layout_marginStart="8dp"
             app:layout_constraintBottom_toBottomOf="@+id/image_photo"
-            app:layout_constraintTop_toTopOf="@id/image_photo"
             app:layout_constraintStart_toEndOf="@id/image_photo"/>
 
         <Constraint
