@@ -2,15 +2,10 @@
     <string name="app_name">MyAnimations</string>
     <string name="action_settings">Settings</string>
     <string name="bio">Hello, my name is Airon, I\'m Brazilian and I\'m 29 years old.
-I am married and my wife is called Alexandra. She is Peruvian. We have a beautiful five months old baby called Dylan.\n\n
+I am married and my wife\'s name is Alexandra. She is Peruvian. We have a beautiful five months old baby called Dylan.\n\n
 I love to travel and get to know nature.
 The photos below, I took of Machu Picchu when my wife and I visited it in 2017.
 It is an incredible place and I was amazed by it\'s beauty.
 To visualize that place surrounded by mountains seemed to me something magical.
-
     </string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
